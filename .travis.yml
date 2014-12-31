@@ -1,0 +1,10 @@
+language: clojure
+jdk:
+- oraclejdk7
+install:
+- wget -O boot https://github.com/boot-clj/boot/releases/download/v2-r1/boot.sh
+- chmod 755 boot
+- mkdir -p "$HOME/.local/bin"
+- mv boot "$HOME/.local/bin"
+- export PATH="$HOME/.local/bin:$PATH"
+script: boot build-jar && cd example/ && boot yeti run -m fac.Main -a 5 && boot yeti uber jar -m fac.Main && java -jar target/project.jar 5
