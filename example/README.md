@@ -1,22 +1,19 @@
-# boot-yeti example project
+# boot-jasmin example project
 
-This is a tiny factorial calculator project written in [Yeti] that
-uses the [Boot] build tool.  It's based on an
-[example in the Yeti tutorial](http://dot.planet.ee/yeti/intro.html#public-classes).
+This is a tiny Hello World project written in [Jasmin] assembly that
+uses the [Boot] build tool.
 
 ## Continuously Compile, Run
 
-    boot watch yeti run -m fac.Main -a 5
+    boot watch jasmin run -m example.HelloWorld
 
 ## Create a Jar
 
-    boot yeti uber jar -m fac.Main
+    boot jasmin uber jar -m example.HelloWorld
 
 ## Run the Jar
 
-    java -jar target/project.jar 5
-
-**Note: The Yeti compiler only seems to work on Java 7.**
+    java -jar target/project.jar
 
 [Boot]: http://boot-clj.com/
-[Yeti]: http://mth.github.io/yeti/
+[Jasmin]: http://jasmin.sourceforge.net/
